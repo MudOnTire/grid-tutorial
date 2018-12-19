@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: center;
+    }
+
+    #content {
+      color: #fff;
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-gap: 10px;
+      position: relative;
+    }
+
+    #content>* {
+      background-color: #3bbced;
+      padding: 30px;
+    }
+
+    header {
+      grid-column: 1/13;
+    }
+
+    main {
+      grid-column: 4/13;
+      grid-row: 2/4;
+    }
+
+    aside {
+      grid-column: 1/4;
+    }
+
+    section {
+      grid-column: 1/13;
+      grid-row: 4/6;
+    }
+
+    nav{
+      grid-column: 1/4;
+    }
+
+    footer{
+      grid-column: 1/13;
+    }
+
+    #grid{
+      padding: 0;
+      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: transparent;
+      grid-template-columns: repeat(12,1fr);
+      grid-gap: 10px;
+    }
+    #grid p{
+      background-color: rgba(0,0,0,0.2);
+    }
+
+    input:checked + #content>#grid{
+      display: grid;
+    }
+  </style>
+</head>
+
+<body>
+  show grid: <input type="checkbox" name="" id="">
+  <div id="content">
+
+    <div id="grid">
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+
+    <header>Header</header>
+    <main>Main</main>
+    <section>Section</section>
+    <aside>Aside</aside>
+    <nav>Nav</nav>
+    <footer>Footer</footer>
+  </div>
+
+</body>
+
+</html>
